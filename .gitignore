@@ -134,8 +134,8 @@ dmypy.json
 Beer_similarity_output.csv
 Untitled.ipynb
 discord_sim.ipynb
-final.csv
-lda_script.py
+*.csv
+*.xlsx
 lift_script.py
 new_ut_reddit.csv
 sentiment_embedding_model/
@@ -143,9 +143,5 @@ sentiment_embedding_model2/
 sentiment_vector.py
 sentimentchart.xlsx
 test.py
-word_freq.csv
-word_pair_freq.csv
 wordfreq_script.py
-~$utreddit_sentiment_output.xlsx
 Similarity_spacy.py
-utreddit_sentiment_output.xlsx
