@@ -11,7 +11,7 @@ from nltk.corpus import wordnet
 nltk.download('stopwords')
 stop = stopwords.words('english')
 
-df = pd.read_csv('aggregate_reddit_text.csv', encoding='latin1')
+df = pd.read_csv('OutsideLabels.csv', encoding='latin1')
 df = df.replace('[^a-zA-Z0-9 ]', '', regex=True)
 # df = df.dropna()
 df_list = df.values.tolist()
@@ -77,7 +77,7 @@ print('Number of documents: %d' % len(corpus))
 from gensim.models import LdaModel
 
 # Set training parameters.
-num_topics = 10
+num_topics = 20
 chunksize = 2000
 passes = 20
 iterations = 400
