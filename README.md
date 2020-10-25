@@ -5,4 +5,5 @@ This is the GitHub repository for the code I used to write my article. The scrip
 # How to Use
 
 This project runs on python. Install requirements needed with
-`pip install -r requirements.txt`
+
+```pip install -r requirements.txt```
