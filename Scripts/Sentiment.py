@@ -1,8 +1,8 @@
 #!/usr/bin/python3.8
 # install pandas with pip install --user pandas
 # install nltk with pip install --user nltk
-# Set inputs after line 87
-# Uncomment line 94 for single column analysis or line 97 for multiple column topic analysis
+# Set inputs after line 91
+# Uncomment line 98 for single column analysis or line 101 for multiple column topic analysis
 # Custom update vader dictionary in lines 21 and 22
 # This program returns the sentiment scores for a single column of text using the VADER dictionary
 
