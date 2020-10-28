@@ -1,7 +1,7 @@
 #!/usr/bin/python3.8
 #Install LDA library if not already installed
 #pip install --user lda
-# Specify inputs in line 26
+# Specify inputs after line 25
 # there are two output files. Set the names of these files in lines 33 and 34
 import os, csv, nltk, lda
 import pandas as pd
@@ -40,11 +40,10 @@ print("Number of rows with any of the empty columns:")
 print(df.isnull().sum().sum())
 df=df.dropna()
 
-
-
 word_tokenizer=RegexpTokenizer(r'\w+')
 wordnet_lemmatizer = WordNetLemmatizer()
 stopwords_nltk=set(stopwords.words('english'))
+
 
 def tokenize_text(version_desc):
     lowercase=version_desc.lower()
