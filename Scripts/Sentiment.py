@@ -1,8 +1,8 @@
 #!/usr/bin/python3.8
 # install pandas with pip install --user pandas
 # install nltk with pip install --user nltk
-# Set inputs after line 91
-# Uncomment line 98 for single column analysis or line 101 for multiple column topic analysis
+# Set inputs after line 90
+# Uncomment line 97 for single column analysis or line 100 for multiple column topic analysis
 # Custom update vader dictionary in lines 21 and 22
 # This program returns the sentiment scores for a single column of text using the VADER dictionary
 
@@ -10,8 +10,9 @@ import pandas as pd
 import numpy as np
 import nltk
 import sys
-
 nltk.download("vader_lexicon")
+
+
 def get_sentiment(rating_data):
     """
     https: // github.com / cjhutto / vaderSentiment
@@ -38,6 +39,7 @@ def get_sentiment(rating_data):
         rating_data.loc[i, 'sent_pos'] = ss['pos']
         rating_data.loc[i, 'sent_compound'] = ss['compound']
     return rating_data
+
 
 def parse_topics_for_sentiment(input_file, topics, topic):
     """This function takes in a file with extracted text per topic
@@ -73,7 +75,6 @@ def parse_topics_for_sentiment(input_file, topics, topic):
     print("Written to", output_name)
 
 
-
 def single_column_sentiment(input_file, output_file):
     """Input: CSV file with text in the first row
         Output: Excel file with sentiment scores for each line"""
@@ -83,8 +84,6 @@ def single_column_sentiment(input_file, output_file):
     sentiment_data = get_sentiment(df)
     sentiment_data.to_excel(output_file, index = False)
     print("Written to", output_file)
-
-
 
 
 if __name__ == "__main__":
