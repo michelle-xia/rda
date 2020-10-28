@@ -1,6 +1,6 @@
 # rda
 
-This is the GitHub repository for the code I used to write my article. The scripts are inside the [Scripts](Scripts/) folder.
+This is the GitHub repository for the code I used to write my [article](https://towardsdatascience.com/how-college-students-are-handling-covid-19-3705016205fe#e746-de8b47d8b8a7). The scripts are inside the [Scripts](Scripts/) folder.
 
 # How to Use
 
