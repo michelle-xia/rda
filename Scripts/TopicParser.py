@@ -3,7 +3,7 @@
 # pip install --user pandas
 # This program returns each all text entries associated with a certain topic. If you do not
 # have topic modeling per Doc, run LDA_reviews.py
-# Set inputs after line 44
+# Set inputs after line 46
 import pandas as pd
 
 
@@ -20,6 +20,7 @@ def merge_doc_with_post(text_input, doc_input, output= "merged_doctopics_and_tex
     merged = doc.merge(agg, on='id', how='outer')
     merged.to_csv(output)
     return output
+
 
 def extract(inputfile, topics, tolerance = 0.5,  final_output = "ExtractedPostsPerTopic.csv"):
     """This function extracts all text related to a certain topic
@@ -40,6 +41,7 @@ def extract(inputfile, topics, tolerance = 0.5,  final_output = "ExtractedPostsP
     postdf.to_csv(final_output)
     print(final_output)
 
+    
 if __name__ == "__main__":
     # Set inputs here
     input_text_file = ""  # input file with text data to merge
