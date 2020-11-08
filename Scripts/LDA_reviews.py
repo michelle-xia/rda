@@ -1,8 +1,8 @@
 #!/usr/bin/python3.8
 #Install LDA library if not already installed
 #pip install --user lda
-# Specify inputs after line 25
-# there are two output files. Set the names of these files in lines 33 and 34
+# Specify inputs after line 25. Input is a CSV file with 2 columns.
+# There are two xlsx output files. Set the names of these files in lines 33 and 34
 import os, csv, nltk, lda
 import pandas as pd
 import numpy as np
@@ -23,15 +23,15 @@ nltk.download('punkt')
 nltk.download('wordnet')
 
 # Set inputs here
-input_file = ""
+input_file = ".csv"  # input a CSV file
 
-id_col = 'id' # specify name of column enumerating each individual doc
+id_col = 'id' # specify name of column enumerating/uniquely identifying each individual doc
 text_col = 'Post' # specify name of column with text entries
 ntopics= 7  # set number of topics to create
 
 # Output names
-output_text_file = ""  # set name for file with text distribution per topic
-output_doc_file = ""   # set name for file with topic distribution per line
+output_text_file = ".xlsx"  # set name for file with text distribution per topic. Must end in xlsx.
+output_doc_file = ".xlsx"   # set name for file with topic distribution per line. Must end in xlsx.
 
 df=pd.read_csv(input_file, encoding='latin1')
 
